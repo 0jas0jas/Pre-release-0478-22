@@ -1,0 +1,69 @@
+// Program for pre-release material for computer science 0478/22
+// Made by Ojas.
+
+//CONSTANTS
+player_names --> []
+no_players --> 0
+no_holes --> 0
+par --> 0
+
+//task 1
+
+//Inputting and validating no_players
+REPEAT
+    OUTPUT "How many players are playing? (Please enter give a number between 2 to 4): "
+    INPUT no_players
+    IF no_players < 2 OR no_players > 4 THEN
+        OUTPUT "Invalid Input. Please try again."
+    END IF
+UNTIL no_players >= 2 AND no_players >= 4
+
+
+#Inputting And Storing Player Names to player_names array
+FOR i --> 0 TO no_players DO
+    OUTPUT "Player " + (i + 1) + ", please enter your name: " 
+    INPUT player_name
+    player_names[ i ] --> player_name
+NEXT i
+
+#Inputting the number of holes to be played
+REPEAT 
+    OUTPUT "Choose your preffered number of holes (Enter either 9 or 18): "
+    INPUT no_holes
+    IF no_holes != 9 OR no_holes != 18 THEN
+        OUTPUT "Invalid Input. Please try again."
+    END IF
+UNTIL no_holes == 9 OR no_holes == 18
+
+
+#Inputting par for the course
+OUTPUT "What would be the par for this course?: "
+INPUT par
+
+
+#Printing all the inputs
+OUTPUT "The information that you've entered is as follows:"
+FOR i --> 0 TO no_players DO
+    OUTPUT "Player" + ( i + 1 ) + player_names[i]
+NEXT i
+OUTPUT "The number of holes that will be played: " + no_holes
+OUTPUT "The par of the course: " + par
+
+#Initialising Arrays
+IF no_holes == 9 THEN
+    
+    //SCORE ARRAYS
+    player1 --> [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player2 --> [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player3 --> [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player4 --> [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+ELSE IF no_holes == 18 THEN
+    
+    //SCORE ARRAYS
+    player1 --> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player2 --> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player3 --> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    player4 --> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+END IF
