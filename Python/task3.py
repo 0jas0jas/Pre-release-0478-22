@@ -104,4 +104,7 @@ totalScores.append(player4Score)
 
 print("The game has ended. The results are as follows: ")
 for player in range(no_players):
-    print("Player " + str(player + 1) + ": " + str(totalScores[player]))  
+    print("Player " + str(player + 1) + ": " + str(totalScores[player]))
+
+
+#options
