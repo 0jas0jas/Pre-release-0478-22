@@ -80,6 +80,15 @@ for hole in range(no_holes):
             player4[hole] = strokes
 
 #TASK 3
+
+#Function to calculate mean in a list
+def mean(mylist):
+    summ = 0
+    for item in mylist:
+        summ = summ + item
+    average = summ / len(mylist)
+    return average
+#---------------------------------------
 player1Score = 0
 player2Score = 0
 player3Score = 0
@@ -102,9 +111,25 @@ for score in player4:
     player4Score = player1Score + score
 totalScores.append(player4Score)
 
+average_list = [totalScores[i] / no_holes for i in range(0,len(totalScores))]
+average_round_score = mean(totalScores)
+
+sum_of_all_scores = 0
+for score in totalScores:
+    sum_of_all_scores = sum_of_all_scores + score
+
+average_hole_score = sum_of_all_scores / no_holes
+
 print("The game has ended. The results are as follows: ")
 for player in range(no_players):
+    print("----------------------------------------------------------------------------------------")
     print("Player " + str(player + 1) + ": " + str(totalScores[player]))
+    print("Player " + str(player + 1) +" Average" + ": " + str(average_list[player]))
+    print("----------------------------------------------------------------------------------------")
+
+print("Average round score: " , average_round_score)
+print("Average hole score: " , average_hole_score)
+print("----------------------------------------------------------------------------------------")
 
 
 #options
