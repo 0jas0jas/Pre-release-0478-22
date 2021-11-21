@@ -126,6 +126,39 @@ for player in range(no_players):
     print("Player " + str(player + 1) + ": " + str(totalScores[player]))
     print("Player " + str(player + 1) +" Average" + ": " + str(average_list[player]))
     print("----------------------------------------------------------------------------------------")
+     
+    if 1 in player1:
+        counter= 0 
+        for score in player1:
+            if score == 1:
+                counter = counter + 1
+        print('Player 1 scored ', counter, " Hole-in-ones")        
+    print("----------------------------------------------------------------------------------------")
+    
+    if 1 in player2:
+        counter1= 0 
+        for score in player2:
+            if score == 1:
+                counter1 = counter1 + 1
+        print('Player 2 scored ', counter1, " Hole-in-ones")        
+    print("----------------------------------------------------------------------------------------")
+    
+    if 1 in player3:
+        counter2= 0 
+        for score in player3:
+            if score == 1:
+                counter2 = counter2 + 1
+        print('Player 3 scored ', counter2, " Hole-in-ones")        
+    print("----------------------------------------------------------------------------------------")
+    
+    if 1 in player4:
+        counter3= 0 
+        for score in player4:
+            if score == 1:
+                counter3 = counter3 + 1
+        print('Player 4 scored ', counter3, " Hole-in-ones")        
+    print("----------------------------------------------------------------------------------------")
+    
 
 print("Average round score: " , average_round_score)
 print("Average hole score: " , average_hole_score)
